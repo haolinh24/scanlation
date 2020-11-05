@@ -1,0 +1,123 @@
+/* Basic styling */
+.cover_picture {
+    width: 45vw;
+    height: auto;
+    /* background-color: black; */
+    /* height: 100%; */
+    background-image: url('sun_halfscreen5.jpg');
+    background-repeat:no-repeat;
+    /* background-size: auto 50% */
+    background-attachment: fixed;
+    background-size: 45% 100%;
+    background-position: top left;
+}
+
+
+/* Animate the background shapes */
+/* #background path { */
+#background g {
+
+    animation: pulse 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+
+
+    /* Necessary to keep the SVG objects in place while scaling */
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+@keyframes pulse {
+  /* Rotating it along with the scale makes it a little bit more fancy */
+  0%, 100% { transform: scale(0) rotate(33deg); }
+  35%, 65% { transform: scale(1) rotate(0deg); }
+}
+/* * {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #263238;
+} */
+
+.btn {
+	display: block;
+	color: black;
+	min-width: 154px;
+	text-decoration: none;
+	margin-right: 50px;
+	padding-top: 40px;
+  padding-bottom: 0.5em;
+	position: relative;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: 'Permanent Marker', cursive;
+  margin-left: 3vw;
+}
+
+.btn:hover .button-stroke:nth-child(2) {
+			stroke-dashoffset: 0;
+		}
+
+.button-stroke {
+	display: block;
+	width: calc(100% - 40px);
+	height: 20px;
+	stroke: yellow;
+	position: absolute;
+	left: 20px;
+	bottom: -10px;
+	stroke-width: 4;
+}
+
+.button-stroke:nth-child(2) {
+		stroke-dasharray: 655px;
+		stroke-dashoffset: 655px;
+		stroke: #11171a;
+		stroke-width: 5;
+		transition: stroke-dashoffset 800ms ease-out;
+	}
+
+.picture_and_title {
+  display: grid;
+  grid-template-columns: 4.5fr 5.5fr;
+  grid-template-rows: 1fr;
+}
+
+.cover_picture {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.title{
+  grid-column-start: 2;
+  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-self: center;
+  justify-content: center;
+}
+
+.keyword {
+  font-size: 3em;
+  font-family: 'Staatliches', cursive;
+}
+
+h1 {
+  font-family: 'Special Elite', cursive;
+  font-size: 2.5em;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  font-family: 'Special Elite', cursive;
+  font-size: 1em;
+}
+.arrow_down {
+  border-top: 0.8em solid black;
+  border-left: 0.8em solid transparent;
+  border-right: 0.8em solid transparent;
+  width: 0;
+  height: 0;
+  margin-left: 26.5vw;
+}
