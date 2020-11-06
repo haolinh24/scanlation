@@ -759,6 +759,62 @@ josei_scan.onmouseover = function() {josei_appear()}
 josei_publish.onmouseout = function() { normal_state() }
 josei_scan.onmouseout = function() { normal_state() }
 
+// SLIDESHOW SCANNING
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  console.log(n)
+  dots[slideIndex-1].className += " active";
+}
+// SLIDESHOW REDRAWING
+showSlides_redrawing(slideIndex);
+
+function plusSlides_redrawing(n) {
+  showSlides_redrawing(slideIndex += n);
+}
+
+function currentSlide_redrawing(n) {
+  showSlides_redrawing(slideIndex = n);
+}
+
+function showSlides_redrawing(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides_redrawing");
+  var dots = document.getElementsByClassName("dot_redrawing");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  console.log(n)
+  dots[slideIndex-1].className += " active";
+}
+
 //ScrollMagic
 function all_article_button(x) {
   if (x.matches) {

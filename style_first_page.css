@@ -244,7 +244,104 @@ button.Click:active::before {
   height: 0;
   display: block;
 } */
+/* SLIDESHOW */
 
+.slideshow, .slideshow_redrawing {
+  display: none;
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides, .mySlides_redrawing {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.8)
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  /* background-color: rgba(0,0,0,0.8); */
+  opacity: 0.5;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot, .dot_redrawing {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover, .dot_redrawing:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* BOX SCANLATION */
 #box-scanning, #box-redrawing, #box-typesetting, #box-qualitychecker {
   border-radius: 0.75em;
   border: 0.2em solid black;
@@ -738,29 +835,65 @@ text-transform: lowercase;
 }
 @media only screen and (max-width: 1300px) {
   #box-scanning, #box-redrawing, #box-typesetting, #box-qualitychecker {
-    grid-template-columns: 1fr 0.1fr;
-    grid-template-rows: 1fr 0.2fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 0.2fr;
 
   }
 
-  .wrapper, .wrapper_redrawing, .wrapper_typesetting, .wrapper_qualitychecker {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
+  .wrapper_typesetting, .wrapper_qualitychecker{
 
-
-  .text-scanning, .text-redrawing, .text-typesetting, .text-qualitychecker {
+  /* .wrapper, .wrapper_redrawing, .wrapper_typesetting, .wrapper_qualitychecker { */
     grid-column: 1/2;
     grid-row: 2/3;
   }
-  .close_scanning, .close_redrawing, .close_typesetting, .close_qualitychecker {
-    grid-column: 2/3;
+
+  .wrapper, .wrapper_redrawing {
+    display: none;
+  }
+  .slideshow, .slideshow_redrawing {
+    display: block;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: center;
+  }
+  .text-scanning, .text-redrawing, .text-typesetting, .text-qualitychecker {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .close, .close_redrawing, .close_typesetting, .close_qualitychecker {
+    grid-column: 1/2;
     grid-row: 1/2;
   }
+
+  #pictogram_genres{
+    width: 100%;
+    margin-left: 0;
+    margin: 0;
+  }
+
 }
 
 @media only screen and (max-width: 700px) {
+  .title_and_picture {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 
+  .cover_picture {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .title {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
   #box-scanning, #box-redrawing, #box-typesetting, #box-qualitychecker {
 
     margin: 5vw;
