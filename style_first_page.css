@@ -597,9 +597,14 @@ text-transform: lowercase;
 }
 .tooltip_textnew, .tooltip_textNew, .tooltip_date {
   font-family: 'Roboto', sans-serif;
+  margin-right: -0.5px;
 }
 .tooltip_date {
   font-weight: bold;
+}
+.tooltip {
+  /* background-color: white; */
+  box-shadow: 0 0 4px black;
 }
 
 /* PICTOGRAM */

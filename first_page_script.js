@@ -311,7 +311,7 @@ tooltip = d3
   .append("div")
   .attr("class", "tooltip")
   .style("position", "fixed")
-  .style("background-color", "#D3D3D3")
+  .style("background-color", "white")
   .style("padding", "0.5em")
   .style("display", "none");
 

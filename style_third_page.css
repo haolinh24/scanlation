@@ -1,3 +1,5 @@
+/* Animate the background shapes */
+/* #background path { */
 #background g {
 
     animation: pulse 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
@@ -14,17 +16,15 @@
   35%, 65% { transform: scale(1) rotate(0deg); }
 }
 
-
 h1 {
-  font-size: 6em;
+  font-size: 4.5em;
   font-family: 'Staatliches', cursive;
   text-align: center;
-  color: white;
 }
 
 h2 {
   font-family: 'Special Elite', cursive;
-  font-size: 2.2em;
+  font-size: 2.5em;
   text-align: center;
   color: white;
 }
@@ -35,25 +35,86 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 1fr;
-  width: 98.3vw;
+  width: 100vw;
   height:100vh;
   margin: 0;
 }
-.cover_picture {
-  height: 100%;
-  width: 100%;
-}
-/* .cover_picture_wrapper {
-  grid-column: 1/2;
-  grid-row: 1/2;
-} */
 
+.cover_picture, #background {
+  grid-column: 1/2;
+  height: 100%;
+  width: 100%
+}
 .title{
   grid-column: 2/3;
-  grid-row: 1/2;
   justify-content: center;
   align-self: center;
   margin-right: 4vw;
+}
+
+/* line graph style */
+.line-chapter {
+  fill: none;
+  /* stroke: steelblue; */
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.line-group {
+  stroke: #b2b1ad;
+  fill: none;
+  stroke-width: 2px;
+}
+
+.axisSteelBlue text{
+  /* fill: steelblue; */
+  fill: black;
+  font-size: 1.3em;
+  font-family: Georgia;
+}
+.axisSteelBlue path{
+  /* stroke: steelblue; */
+  stroke: black;
+  stroke-width: 0.2em;
+}
+.axisRed text{
+  /* fill: red; */
+  fill: #b2b1ad;
+  font-size: 1.3em;
+  font-family: Georgia;
+}
+.axisRed path{
+  /* stroke: red; */
+  stroke: #b2b1ad;
+  stroke-width: 0.2em;
+}
+.tooltip {
+  box-shadow: 0 0 4px black;
+}
+.date_tooltip {
+  font-weight: bold;
+}
+.tooltip_textChapters {
+  /* color: steelblue; */
+  color: black;
+
+}
+.tooltip_textGroup {
+  /* color: red; */
+  color: #b2b1ad;
+
+}
+.tick {
+  font-family: Georgia;
+  font-size: 1.3em;
+}
+.grid {
+  stroke: 0.2em;
+  opacity: 0.1;
+}
+#container {
+  width: 70%;
+  margin-left: 15%;
 }
 .paragraph {
   display: flex;
@@ -75,143 +136,20 @@ p {
   text-align: center;
   font-size: 2em;
 }
-.subtitle {
-  font-family: 'Roboto';
-  font-size: 2em;
-  font-weight: 600;
-}
 .caption {
-  font-weight: bold;
-  font-size: 0.8em;
-  font-style: oblique;
   text-align: center;
-}
-.hover {
-  font-weight: lighter;
-}
-.footnote {
   font-weight: bold;
-  font-size: 0.8em;
 }
-.axis line{
-    stroke: #706f6f;
-    stroke-width: 0.5;
-    shape-rendering: crispEdges;
- }
-
-/* axis contour */
-.axis path {
-stroke: #706f6f;
-stroke-width: 0.7;
-shape-rendering: crispEdges;
+.moreinfo {
+  text-align: center;
+  font-style: oblique;
+  font-size: 0.9em;
 }
-
-/* axis text */
-.axis text {
-fill: #2b2929;
-/* font-family: Georgia; */
-font-family: 'Roboto', sans-serif;
-font-size: 200%;
+h3 {
+  font-size: 2em;
+  font-family: 'Roboto'
 }
-
-/* LINE CHART */
-path.line-0 {
-fill: none;
-stroke: #00565f;
-}
-
-path.line-1 {
-fill: none;
-stroke: #be1e2d;
-/* stroke-dasharray: 2; */
-}
-
-path.line-2 {
-fill: none;
-stroke: #8cac1d;
-/* stroke-dasharray: 6; */
-}
-
-/* path.line-3 {
-fill: none;
-stroke: blue;
-stroke-dasharray: 6;
-} */
-
-.serie_labelViz, .serie_labelKodansha, .serie_labelYen {
-fill: #2b2929;
-/* font-family: Georgia; */
-font-family: 'Roboto', sans-serif;
-font-size: 150%;
-}
-.coalition_text {
-  font-size: 120%
-}
-#container {
-  width: 70%;
-  margin-left: 20%
-}
-.Viz {
-  stroke: #00565f;
-}
-.Kodansha {
-  stroke: #be1e2d;
-}
-.Yen {
-  stroke: #8cac1d;
-}
-.tooltip_textViz {
-  color: #00565f;
-}
-.tooltip_textKodansha {
-  color: #be1e2d;
-}
-.tooltip_textYen {
-  color: #8cac1d;
-}
-.serie_labelViz {
-  fill: #00565f;
-}
-.serie_labelKodansha {
-  fill: #be1e2d;
-}
-.serie_labelYen {
-  fill: #8cac1d;
-}
-.tooltip_date {
-  font-weight: bolder;
-}
-.grid {
-  opacity: 0.2;
-  stroke-width: 0.3;
-}
-#pictogram_scan {
-  width: 60%;
-  margin-left: 20%;
-  margin-top: -10%;
-  margin-bottom: -10%;
-}
-#pictogram_scan text {
-  font-family: 'Permanent Marker', cursive;
-  /* font-family: 'Roboto', sans-serif; */
-  font-weight: 200;
-
-}
-.tooltip {
-  box-shadow: 0 0 4px black;
-  /* font-family: 'Permanent Marker', cursive; */
-  font-family: 'Roboto', sans-serif;
-
-}
-.coalition_text {
-  /* font-family: 'Permanent Marker', cursive; */
-  font-family: 'Roboto', sans-serif;
-
-
-}
-
-/* STYLE FOR TOGGLE MENU */
-/* style for toggle menu */
+/* toggle menu style */
 #btn-pluss-wrapper.appear {
   display: block;
 
@@ -333,7 +271,7 @@ font-size: 150%;
    color: black;
 	 transition: all 1s ease;
 	 pointer-events: none;
-   /* font-family: 'Permanent Marker', cursive; */
+   font-family: 'Permanent Marker', cursive;
    font-size: 1em;
 }
  .tooltip_menu::after {
@@ -405,7 +343,10 @@ font-size: 150%;
 		 transform: translateY(3px);
 	}
 }
-
+.footnote {
+  font-weight: bold;
+  font-size: 0.8em;
+}
 /* STYLE READ NEXT AND BACK  */
 .next_and_back {
   display: none;
@@ -459,6 +400,82 @@ font-size: 150%;
 .read_next:hover + .title_next, .read_back:hover + .title_back{
   display: block;
 }
+
+/* PICTURE STYLE */
+.scanlation_publisher {
+  width: 70%;
+  margin-left: 15%;
+}
+.scanlation_publisher:hover {opacity: 0.7;}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-family: 'Roboto'
+}
+
+/* Add Animation */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
 @media only screen and (max-width: 700px) {
   h1 {
     font-size: 2em;
@@ -483,17 +500,24 @@ font-size: 150%;
   .chart {
     margin-top: 10vh;
   }
-  .next_and_back {
-    display: grid;
-  }
-  p, #pictogram_scan, #container {
+
+  p, #container {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
+#container{
+  margin-bottom: 5vh;
+}
+.scanlation_publisher {
+  width: 100%;
+  margin: 0;
+}
+}
 
-  #container {
-    margin-bottom: 10vh;
+
+@media only screen and (max-width: 1200px) {
+  .next_and_back {
+    display: grid;
   }
-
 }
