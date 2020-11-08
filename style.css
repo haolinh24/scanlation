@@ -9,7 +9,7 @@
     /* background-size: auto 50% */
     background-attachment: fixed;
     background-size: 45% 100%;
-    background-position: top left;
+    /* background-position: top left; */
 }
 
 
@@ -87,6 +87,7 @@ body {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+  align-self: center;
 }
 
 .title{
@@ -99,7 +100,7 @@ body {
 }
 
 .keyword {
-  font-size: 3em;
+  font-size: 2em;
   font-family: 'Staatliches', cursive;
 }
 
@@ -119,5 +120,9 @@ h2 {
   border-right: 0.8em solid transparent;
   width: 0;
   height: 0;
-  margin-left: 26.5vw;
+
+}
+.arrow_down_wrapper {
+  display: flex;
+  justify-content: center;
 }
