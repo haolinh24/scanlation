@@ -333,8 +333,8 @@ font-size: 150%;
    color: black;
 	 transition: all 1s ease;
 	 pointer-events: none;
-   /* font-family: 'Permanent Marker', cursive; */
-   font-size: 1em;
+         font-family: 'Permanent Marker', cursive; 
+/*    font-size: 1em; */
 }
  .tooltip_menu::after {
 	 content: '';
