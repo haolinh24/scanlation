@@ -1,4 +1,7 @@
-
+/* Code to perform moving images clipping effect
+adapt from animated blob svg text clipping effect by Zach Saucier
+accessed on 11/11/2020
+https://codepen.io/ZachSaucier/pen/gZzPgQ */
 /* Animate the background shapes */
 /* #background path { */
 #background g {
@@ -16,7 +19,7 @@
   0%, 100% { transform: scale(0) rotate(33deg); }
   35%, 65% { transform: scale(1) rotate(0deg); }
 }
-
+/* end of reference code */
 h1 {
   font-size: 4.5em;
   font-family: 'Staatliches', cursive;
@@ -115,7 +118,10 @@ h3 {
 .st3{font-family:'Permanent Marker', cursive;}
 .st4{font-size:26px;}
 
-
+/* Code performs button click effect */
+/* Adapted from example on freefrontend.com by Katherine Kato */
+/* Accessed on 11/11/2020 */
+/* https://codepen.io/kathykato/pen/gOOjgmP */
 .Click {
   box-sizing: border-box;
   margin-left: 1em;
@@ -169,7 +175,7 @@ button.Click:active::before {
   box-shadow: 0 0 0 0.2em #b18597, 0 0 #ffe3e2;
   transform: translate3d(0, 0, -1em);
 }
-
+/* end of reference code */
 .button {
   display: grid;
   grid-template-columns: 1fr 0.3fr 0.3fr 1fr;
@@ -227,6 +233,10 @@ button.Click:active::before {
   text-decoration: none;
   cursor: pointer;
 }
+/* Code performs an arrow */
+/* Taken from an entry by Chris Coyler on css-tricks.com */
+/* accessed on 11/11/2020 */
+/* https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow_scanning, .arrow_redrawing, .arrow_typesetting, .arrow_qualitychecker {
   border-top: 0.8em solid black;
   border-left: 0.8em solid transparent;
@@ -235,17 +245,13 @@ button.Click:active::before {
   height: 0;
   display: none;
 }
+/* end of reference code */
 
-/* .arrow_qualitychecker {
-  border-top: 0.8em solid black;
-  border-left: 0.8em solid transparent;
-  border-right: 0.8em solid transparent;
-  width: 0;
-  height: 0;
-  display: block;
-} */
 /* SLIDESHOW */
-
+/* Code perform a slideshow
+Taken from W3schools.com
+Accessed on 11/11/2020
+https://www.w3schools.com/howto/howto_js_slideshow.asp  */
 .slideshow, .slideshow_redrawing {
   display: none;
 }
@@ -341,6 +347,7 @@ button.Click:active::before {
   from {opacity: .4}
   to {opacity: 1}
 }
+/* end of reference code */
 /* BOX SCANLATION */
 #box-scanning, #box-redrawing, #box-typesetting, #box-qualitychecker {
   border-radius: 0.75em;
@@ -403,6 +410,10 @@ button.Click:active::before {
   font-style: oblique;
 }
 
+/* code perform image comparision slider
+Adapt from codepen.io by Huw Llewllyn
+Accessed on 11/11/2020
+https://codepen.io/nosurprisethere/pen/xrXjYV   */
 
  .wrapper, .wrapper_redrawing, .wrapper_typesetting, .wrapper_qualitychecker{
   /* position: absolute; */
@@ -514,6 +525,7 @@ button.Click:active::before {
   background: #fff;
 }
 
+/* end of reference code */
 
 /* LINE GRAPH CSS */
 .axis line{
@@ -619,6 +631,10 @@ text-transform: lowercase;
   font-family: 'Permanent Marker', cursive;
 }
 /* style for toggle menu */
+/* Code performs toggle menu
+Adapted from freefrontend.com by José Reyes González
+Accessed on 11/11/2020
+https://codepen.io/jreyesgs/pen/qqomjK/  */
 #btn-pluss-wrapper.appear {
   display: block;
 
@@ -643,8 +659,8 @@ text-transform: lowercase;
 	 display: block;
 	 padding-left: 5px;
 	 padding-right: 5px;
-	 border-radius: 22px;
-	 width: 32px;
+	 border-radius: 25px;
+	 width: 35px;
 	 margin: 0 auto;
 	 /* background-color: white; */
    background-color: #cccfce;

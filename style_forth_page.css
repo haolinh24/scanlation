@@ -1,3 +1,8 @@
+/* Animate the background shapes */
+/* Code to perform moving images clipping effect
+adapt from animated blob svg text clipping effect by Zach Saucier
+accessed on 11/11/2020
+https://codepen.io/ZachSaucier/pen/gZzPgQ */
 #background g {
 
     animation: pulse 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
@@ -13,7 +18,7 @@
   0%, 100% { transform: scale(0) rotate(33deg); }
   35%, 65% { transform: scale(1) rotate(0deg); }
 }
-
+/* end of reference code */
 
 h1 {
   font-size: 6em;
@@ -96,6 +101,10 @@ h2 {
 }
 
 /* toggle menu style */
+/* Code performs toggle menu
+Adapted from freefrontend.com by José Reyes González
+Accessed on 11/11/2020
+https://codepen.io/jreyesgs/pen/qqomjK/  */
 #btn-pluss-wrapper.appear {
   display: block;
 
@@ -120,8 +129,8 @@ h2 {
 	 display: block;
 	 padding-left: 5px;
 	 padding-right: 5px;
-	 border-radius: 22px;
-	 width: 32px;
+	 border-radius: 25px;
+	 width: 35px;
 	 margin: 0 auto;
 	 /* background-color: white; */
    background-color: #cccfce;
@@ -289,6 +298,7 @@ h2 {
 		 transform: translateY(3px);
 	}
 }
+/* end of reference code */
 /* read back */
 .prepare_back {
   display: none;

@@ -1,3 +1,9 @@
+/* Code to perform moving images clipping effect
+adapt from animated blob svg text clipping effect by Zach Saucier
+accessed on 11/11/2020
+https://codepen.io/ZachSaucier/pen/gZzPgQ */
+/* Animate the background shapes */
+
 #background g {
 
     animation: pulse 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
@@ -14,6 +20,7 @@
   35%, 65% { transform: scale(1) rotate(0deg); }
 }
 
+/* end of reference code */
 
 h1 {
   font-size: 6em;
@@ -211,7 +218,10 @@ font-size: 150%;
 }
 
 /* STYLE FOR TOGGLE MENU */
-/* style for toggle menu */
+/* Code performs toggle menu
+Adapted from freefrontend.com by José Reyes González
+Accessed on 11/11/2020
+https://codepen.io/jreyesgs/pen/qqomjK/  */
 #btn-pluss-wrapper.appear {
   display: block;
 
@@ -236,8 +246,8 @@ font-size: 150%;
 	 display: block;
 	 padding-left: 5px;
 	 padding-right: 5px;
-	 border-radius: 22px;
-	 width: 32px;
+	 border-radius: 25px;
+	 width: 35px;
 	 margin: 0 auto;
 	 /* background-color: white; */
    background-color: #cccfce;
@@ -333,8 +343,8 @@ font-size: 150%;
    color: black;
 	 transition: all 1s ease;
 	 pointer-events: none;
-         font-family: 'Permanent Marker', cursive; 
-/*    font-size: 1em; */
+   font-family: 'Permanent Marker', cursive;
+   font-size: 1em;
 }
  .tooltip_menu::after {
 	 content: '';
@@ -405,7 +415,7 @@ font-size: 150%;
 		 transform: translateY(3px);
 	}
 }
-
+/* end of reference code */
 /* STYLE READ NEXT AND BACK  */
 .next_and_back {
   display: none;

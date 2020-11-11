@@ -1,3 +1,8 @@
+// Code to draw sankey diagram
+// Adapted from example by Fabrício Rodrigues on bl.ocks.org
+// Accessed on 11/11/2020
+// http://bl.ocks.org/FabricioRHS/80ef58d4390b06305c91fdc831844009
+
 var drag = {};
 var svg = {};
 
@@ -273,7 +278,7 @@ function getData() {
 
 
 showSankey(getData());
-
+// end of reference code
 //ScrollMagic
 function all_article_button(x) {
   if (x.matches) {

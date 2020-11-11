@@ -106,8 +106,10 @@ close_qualitychecker.onclick = function(){
 console.log(button);
 console.log(button[0]);
 console.log(box_scanning);
-
-// I hope this over-commenting helps. Let's do this!
+ // code perform image comparision slider
+ // Adapt from codepen.io by Huw Llewllyn
+ // Accessed on 11/11/2020
+ // https://codepen.io/nosurprisethere/pen/xrXjYV
 // Let's use the 'active' variable to let us know when we're using it
 let active = false;
 
@@ -232,6 +234,7 @@ document.body.addEventListener('touchcancel',function(){
   document.querySelector('.scroller_redrawing').classList.remove('scrolling');
 });
 
+//end of reference code
 
 // DRAW A LINE GRAPH
 const width = 550;
@@ -760,6 +763,11 @@ josei_publish.onmouseout = function() { normal_state() }
 josei_scan.onmouseout = function() { normal_state() }
 
 // SLIDESHOW SCANNING
+// Code performs a slideshow
+// Taken from W3schools.com
+// Accessed on 11/11/2020
+// https://www.w3schools.com/howto/howto_js_slideshow.asp
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -814,7 +822,7 @@ function showSlides_redrawing(n) {
   console.log(n)
   dots[slideIndex-1].className += " active";
 }
-
+// end of reference code
 //ScrollMagic
 function all_article_button(x) {
   if (x.matches) {

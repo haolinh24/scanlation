@@ -37,7 +37,10 @@
 body {
 	background-color: #263238;
 } */
-
+/* Code performs buttons with stroke  */
+/* Adapted from an example by Michelle Barker on freefrontend.com  */
+/* Accessed on 11/11/2020  */
+/* https://codepen.io/michellebarker/pen/vaYxMJ */
 .btn {
 	display: block;
 	color: black;
@@ -114,6 +117,11 @@ h2 {
   font-family: 'Special Elite', cursive;
   font-size: 1em;
 }
+
+/* Code performs an arrow */
+/* Taken from an entry by Chris Coyler on css-tricks.com */
+/* accessed on 11/11/2020 */
+/* https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow_down {
   border-top: 0.8em solid black;
   border-left: 0.8em solid transparent;
@@ -122,6 +130,7 @@ h2 {
   height: 0;
 
 }
+/* end of reference code */
 .arrow_down_wrapper {
   display: flex;
   justify-content: center;

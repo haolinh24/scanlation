@@ -524,7 +524,10 @@ all_article_button(x)
 x.addListener(all_article_button)
 
 //PICTURE
-
+// Code perform modal image
+// Taken from W3Schools.com
+//Accessed on 11/11/2020
+//https://www.w3schools.com/howto/howto_css_modal_images.asp
 // Get the modal
 var modal = document.getElementById("myModal");
 

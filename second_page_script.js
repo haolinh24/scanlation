@@ -1,3 +1,7 @@
+// code perform line graph with dual Y axes
+// adapted from example of d3noob's on bl.ocks.org
+//accessed on 11/11/2020
+//https://bl.ocks.org/d3noob/e34791a32a54e015f57d
 const width = 960;
 const height = 500;
 const margin = 5;
@@ -75,7 +79,7 @@ let id = 0;
 const ids = function () {
     return "line-"+id++;
 }
-
+//end of reference code
 //---------------------------TOOLTIP----------------------------//
 //**Tooltip_hover with verticle line//
 //**This code was adapted from bl.ocks.org post by dianaow 29-6-2019
@@ -211,7 +215,7 @@ function updateTooltipContent(idx) {
       return d.key + "&emsp;<span style='float:right'>" + d3.format(',')(Math.floor(d.number)) + "</span>";
     });
 }
-
+// end of reference code
 //-------------------------2. DRAWING---------------------------//
 
 //-----------------------------AXES-----------------------------//
