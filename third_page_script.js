@@ -1,6 +1,6 @@
 var parseTime = d3.timeParse("%Y");
 //format the data
-d3.csv("data/new_group_chapter_each_year (article 3).csv", function(error, data) {
+d3.csv("https://raw.githubusercontent.com/haolinh24/scanlation/master/data/new_group_chapter_each_year%20(article%203).csv", function(error, data) {
 data.forEach(function(d) {
   d.date = parseTime(d.Year);
   d.Chapters = +d.Chapters;
