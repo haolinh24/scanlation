@@ -256,7 +256,7 @@ const svg = d3.select("div#container").append("svg")
 
 //-----------------------------DATA-----------------------------//
 const timeConv = d3.timeParse("%Y");
-const dataset = d3.csv("https://cdn.glitch.com/f2fdde1b-8103-40f1-9f5b-f114ef3681e1%2Fpublishervsscanlator_joseiandseinen.csv?v=1602297621419");
+const dataset = d3.csv("data/publishervsscanlator_joseiandseinen%20(article%201).csv");
 dataset.then(function(data) {
     var slices = data.columns.slice(2).map(function(id) {
         return {
